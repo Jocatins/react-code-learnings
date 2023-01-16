@@ -32,10 +32,11 @@ import "./style.css";
 
 // import List from "./components/List";
 // import handleLoading from "./components/handleLoading";
-import CodingExercise from "./components/CodingExercise";
-import Parent from "./components/ChildParent";
-import AddTwoNums from "./components/AddTwoNums";
+
 import Counter from "./components/Counter";
+import UseEffect from "./components/UseEffect";
+import UseReducer from "./components/UseReducer";
+import MyContext from "./components/UseContext";
 
 // const ListWithLoading = handleLoading(List);
 
@@ -57,10 +58,11 @@ function App() {
 			</Canvas> */}
 			<input ref={inputRef} type="text" />
 			<button onClick={onButtonClick}>Focus</button>
-			<CodingExercise />
-			<Parent />
-			<AddTwoNums />
+
 			<Counter />
+			<UseEffect />
+			<UseReducer />
+			<MyContext />
 		</div>
 	);
 }
