@@ -33,10 +33,12 @@ import "./style.css";
 // import List from "./components/List";
 // import handleLoading from "./components/handleLoading";
 
-import Counter from "./components/Counter";
-import UseEffect from "./components/UseEffect";
-import UseReducer from "./components/UseReducer";
-import MyContext from "./components/UseContext";
+import Hoc1 from "./components/Hoc1";
+import CounterClick from "./components/CounterClick";
+import CounterHover from "./components/CounterHover";
+import FetchData1 from "./components/FetchData1";
+import FetchDataAsync from "./components/FetchDataAsync";
+import FetchDataAxios from "./components/FetchDataAxios";
 
 // const ListWithLoading = handleLoading(List);
 
@@ -59,10 +61,12 @@ function App() {
 			<input ref={inputRef} type="text" />
 			<button onClick={onButtonClick}>Focus</button>
 
-			<Counter />
-			<UseEffect />
-			<UseReducer />
-			<MyContext />
+			<Hoc1 />
+			<CounterClick />
+			<CounterHover />
+			<FetchData1 />
+			<FetchDataAsync />
+			<FetchDataAxios />
 		</div>
 	);
 }
