@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
+import RenderProps from "./components/RenderProps";
 import "./style.css";
+import Counter from "./components/Counter";
 // import { Canvas } from "react-three-fiber";
 // import { useBox } from "use-canon";
 // import { OrbitControls, Stars } from "drei";
@@ -33,13 +35,6 @@ import "./style.css";
 // import List from "./components/List";
 // import handleLoading from "./components/handleLoading";
 
-import Hoc1 from "./components/Hoc1";
-import CounterClick from "./components/CounterClick";
-import CounterHover from "./components/CounterHover";
-import FetchData1 from "./components/FetchData1";
-import FetchDataAsync from "./components/FetchDataAsync";
-import FetchDataAxios from "./components/FetchDataAxios";
-
 // const ListWithLoading = handleLoading(List);
 
 function App() {
@@ -61,12 +56,16 @@ function App() {
 			<input ref={inputRef} type="text" />
 			<button onClick={onButtonClick}>Focus</button>
 
-			<Hoc1 />
-			<CounterClick />
-			<CounterHover />
-			<FetchData1 />
-			<FetchDataAsync />
-			<FetchDataAxios />
+			<RenderProps
+				render={(count, incrementCount) => {
+					return (
+						<Counter
+							count={count}
+							incrementCount={incrementCount}
+						/>
+					);
+				}}
+			/>
 		</div>
 	);
 }
